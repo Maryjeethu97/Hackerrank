@@ -1,0 +1,16 @@
+int beautifulTriplets(int d, int arr_count, int* arr) {
+    int count=0;
+    for(int i=0;i<arr_count;i++){
+        for(int j=i+1;j<arr_count;j++){
+            if(abs(arr[i]-arr[j])==d){
+                for(int k=j+1;k<arr_count;k++){
+                    if(abs(arr[j]-arr[k])==d){
+                        count++;
+                        break;
+                    } 
+                }
+            }
+        }
+    }
+    return count;
+}

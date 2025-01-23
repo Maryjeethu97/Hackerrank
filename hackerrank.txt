@@ -1,0 +1,21 @@
+char hackerrank[]="hackerrank";
+    int index=0;
+    int len=strlen(s);
+    if(len<10){
+        return "NO";
+    }
+    else{
+    for(int i=0;i<len;i++){
+        if(s[i]==hackerrank[index]){
+            index++;
+        }
+        
+    }
+    }
+    
+    if(index<=9)
+        return "NO";
+    else {
+        return "YES";
+    }
+}

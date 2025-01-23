@@ -1,0 +1,15 @@
+ int len1=strlen(s);
+    int len2=strlen(t);
+    
+    int i=0;        //common_prefix
+    while(s[i]==t[i]){  //&& i<len1 && i<len2
+        i++;
+    }
+    
+    int total_op=len1+len2-2*i;
+    
+    if(total_op<=k )   //&& (total_op-k)%2==0
+        return "Yes";
+    else {
+        return "No";
+    }

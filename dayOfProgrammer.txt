@@ -1,0 +1,27 @@
+char* dayOfProgrammer(int year) {
+    int sum=0;
+    if(year>=1700 && year<=1917){
+        if (year%4==0){
+             sum=256-244;
+        } 
+        else {
+             sum=256-243;
+        }
+    }
+    else if (year==1918) {
+        sum=256-230;
+    }
+    else if(year>1918 && year<=2700) {
+    if(year%400==0||((year%4==0) && (year%100!=0))){
+        sum=256-244;
+    }
+    else {
+        sum=256-243;
+    }
+    }
+    //printf("%d.09.%d", sum,year);
+    char out=(char)malloc(20);
+    sprintf(out,"%d.09.%d", sum, year);
+    return out;
+    
+}

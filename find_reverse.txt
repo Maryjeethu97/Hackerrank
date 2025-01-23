@@ -1,0 +1,20 @@
+int find_reverse(int num){
+    int reverse_num=0;
+    while(num!=0){
+        int remainder=num%10;
+        reverse_num=reverse_num*10+remainder;
+        num/=10;
+    }
+    return reverse_num;
+}
+
+int beautifulDays(int i, int j, int k) {
+    int count=0;
+    for (int m=i; m<=j; m++) {
+        int diff=(abs(m-find_reverse(m)));
+            if(diff%k ==0){
+                count++;
+            }
+    }
+    return count;
+}

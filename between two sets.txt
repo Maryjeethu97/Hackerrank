@@ -1,0 +1,32 @@
+int max=0,min=0;
+    max=(a[0]>a[1])?a[0]:a[1];
+    min=(b[0]>b[1])?b[0]:b[1];
+    int i,j,f,c=0;
+    for(i=max;i<=min;i++)
+    {
+        f=0;
+        for(j=0;j<a_count;j++){
+             if(i%a[j]!=0)
+           {
+                f=1;
+                break;
+            }
+        }
+        if(f==0)
+        {
+            for(j=0;j<b_count;j++){
+                if(b[j]%i!=0)
+                {
+                    f=1;
+                    break;
+                }
+            }
+        }
+        
+        if(f==0){
+            c++;
+        }
+       
+        
+    }
+    return c;

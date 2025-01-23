@@ -1,0 +1,34 @@
+int* circularArrayRotation(int a_count, int* a, int k, int queries_count, int* queries, int* result_count) {
+    int *result=malloc(a_count*sizeof(int));
+    *result_count=queries_count;
+    for(int i=0;i<a_count;i++){
+        int index=(i+k)%a_count;
+       result[index]=a[i];
+    }
+    
+    int *query_result=malloc(sizeof(int)*queries_count);
+    for(int j=0;j<queries_count;j++){
+        query_result[j]=result[queries[j]];
+    }
+    
+    return query_result;
+}
+
+----------------
+qsort(arr, arr_count, sizeof(int), compare);
+    
+    int start=0, m=0;
+    int *result=malloc(arr_count*sizeof(int));
+    
+    while (start<arr_count) {
+        int b=arr[start];
+        result[m++]=arr_count-start;
+        for(int i=0;i<arr_count;i++){
+            arr[i]-=b;
+            
+            if(arr[i]==0)
+                start++;
+        }
+    }
+    *result_count=m;
+    return result;

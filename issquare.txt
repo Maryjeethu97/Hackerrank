@@ -1,0 +1,22 @@
+bool issquare(int num){
+    int x=(int)sqrt(num);
+    if(x*x==num)
+        return true;
+    else {
+    return false;
+    }
+        
+}
+*/
+int squares(int a, int b) {
+    long int count=0;
+/*for(int i=a;i<=b;i++){
+        if(issquare(i))
+            count++;
+    }
+    return count;*/
+    
+    int p=ceil(sqrt(a));
+    int q=floor(sqrt(b));
+    return q-p+1;
+}

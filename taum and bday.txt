@@ -1,0 +1,4 @@
+long int costwhite= wc<(bc+z)?wc:(bc+z);
+  long int blackwhite=bc<(wc+z)?bc:(wc+z);
+  
+  return b*blackwhite+w*costwhite;

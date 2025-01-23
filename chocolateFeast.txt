@@ -1,0 +1,24 @@
+int chocolateFeast(int n, int c, int m) {
+    //int num_bar=0;
+    int num_bar=n/c;
+     int wrappers=num_bar;
+     int newchocolates;
+            
+    while(wrappers>=m){
+         newchocolates=wrappers/m;
+        num_bar+=newchocolates;
+        wrappers=(wrappers%m)+newchocolates;
+    }
+    return num_bar;
+}
+---------------
+int chocolateFeast(int n, int c, int m) {
+    int bars=n/c;
+    int wrappers=bars;
+   while (wrappers>=m) {
+        int newchocolates=wrappers/m;
+        bars+=newchocolates;
+        wrappers=bars%m+newchocolates;
+   }
+   return bars;
+}

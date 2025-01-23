@@ -1,0 +1,24 @@
+int viralAdvertising(int n) {
+    int shared=5, liked=0,cum=0;
+    int count=1;
+    while(count<=n){
+        
+        liked=shared/2;
+        cum+=liked;
+        shared=liked*3;
+        count++;
+    }
+    return cum;
+
+}
+--------------------
+int viralAdvertising(int n) {
+    int shared=5, liked=2,cum=2;
+    for(int i=1;i<n;i++){
+        shared=liked*3;
+        liked=ceil(shared/2);
+        cum+=liked;
+    }
+    
+    return cum;
+}

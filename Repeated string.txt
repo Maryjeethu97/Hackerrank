@@ -1,0 +1,17 @@
+int len=strlen(s);
+    long int num_of_repeats=n/len;
+    int remaining=n%len;
+    
+    int a_count=0;
+    for(int i=0;i<len;i++){
+        if(s[i]=='a')
+            a_count++;
+    }
+    
+    int a_count_rem=0;
+    for(int k=0;k<remaining;k++){
+        if(s[k]=='a')
+            a_count_rem++;
+    }
+    
+    return a_count*num_of_repeats+a_count_rem;

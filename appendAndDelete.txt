@@ -1,0 +1,28 @@
+char* appendAndDelete(char* s, char* t, int k) {
+    int len1=strlen(s);
+    int len2=strlen(t);
+    int diff=abs(len1-len2);
+    
+    int diff1=0;
+    int diff_diff1=0;
+    int diff_diff2=0;
+    
+    if(diff>k)
+        return "No";
+    else {
+    for(int j=0;j<len1;j++){
+        if(s[j]!=t[j]){
+            diff1=j+1;
+             break;
+        }
+    }
+    
+    diff_diff1=len1-diff1;
+    diff_diff2=len2-diff1;
+    }
+    if(diff_diff1+diff_diff2<=k)
+        return "Yes";
+    else {
+        return "No";
+    }
+}

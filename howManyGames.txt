@@ -1,0 +1,27 @@
+int howManyGames(int p, int d, int m, int s) {
+    // Return the number of games you can buy
+    /*
+    int count=0;
+    int sum=0;
+    while (p>=m) {
+        sum=sum+p;
+        p=p-d;
+        count++;
+    }
+    if(s>sum){
+        int add_count=(int)(s-sum)/m;
+        count+=add_count;   
+    }
+    return count;
+    */
+    
+    int count=0;
+    int sum=0;
+    while (sum+p<=s) {
+        sum=sum+p;
+        count++;
+        p=(p-d)>m?p-d:m;
+        
+    }
+    return count;
+    

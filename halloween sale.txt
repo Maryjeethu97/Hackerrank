@@ -1,0 +1,12 @@
+int sum=p;
+    int count=0;
+    while(sum<=s){
+        if((p-d)>m){
+            sum+=(p-d);
+        }
+        else {
+            sum+=m;
+            count++;
+        }
+    }
+    return count; 
