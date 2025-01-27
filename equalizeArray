@@ -1,0 +1,20 @@
+int equalizeArray(int arr_count, int* arr) {
+    
+    int *freqarr =(int *)malloc(100*sizeof(int));
+    for(int i=0;i<100;i++){
+        freqarr[i]=0;
+    }
+    
+    for(int i=0;i<arr_count;i++){
+        freqarr[arr[i]]++;
+    }
+    
+    int max=freqarr[0];
+    for(int i=1;i<100;i++){
+       if(freqarr[i]>max)
+            max=freqarr[i]; 
+    }
+    
+    return arr_count-max;
+    
+}
